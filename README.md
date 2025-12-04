@@ -34,9 +34,9 @@ pip install pillow webcolors
 1. Place your source image (any format Pillow supports) in this directory or provide a path to it.
 2. Run the converter:
    ```bash
-   python3 converter.py path/to/image.png -o output.s 
+   python3 converter.py path/to/image.png -o converted.s 
    ```
-   The script automatically resizes the image to 128×96, quantizes it to the ARMLite palette, and writes the resulting assembly to `output.s` (or any file you specify).
+   The script automatically resizes the image to 128×96, quantizes it to the ARMLite palette, and writes the resulting assembly to `converted.s` (or any file you specify).
 3. Open the ARMLite Simulator at https://peterhigginson.co.uk/ARMlite/.
 4. Paste or upload the generated `.s` file into the simulator editor.
 5. Assemble and run to display your sprite on the virtual PixelScreen.
