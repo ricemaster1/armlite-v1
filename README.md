@@ -1,7 +1,5 @@
 # ARMLite Sprite Converter v1
 
-![ARMLite banner showing a converted sprite](converted.png)
-
 This directory contains `converter.py`, a CLI tool for turning any 128×96 image into ARM assembly that renders a fullscreen sprite inside Peter Higginson's [ARMLite Simulator](https://peterhigginson.co.uk/ARMlite/). The script maps every pixel to one of ARMLite's predefined color names and emits the `.Resolution`, `.PixelScreen`, and per-pixel store instructions expected by the simulator.
 
 ## Preview
