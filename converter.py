@@ -5,7 +5,6 @@ from PIL import Image
 import webcolors
 import sys
 import os
-import math
 import argparse
 
 # Define ARMLite-supported HTML color names 
@@ -26,15 +25,9 @@ def closest_color(rgb):
     return closest
 
 def process_image(image_path, output_path):
-    # parser = argparse.ArgumentParser(description='Convert an image to ARMLite assembly sprite.')
-    # parser.add_argument('image', help='Path to input image')
-    # parser.add_argument('-o', '--output', default='converted.s', help='Output assembly file path')
-    # args = parser.parse_args()
-    #### unused args ignore please 
-
     img = Image.open(image_path).convert('RGB')
     img = img.resize((128, 96))  # Resize to ARMLite high-res display
-    pixels = list(img.getdata())
+    pixels = list(img.getdata())  # type: ignore[arg-type]
 
     # Begin generating the assembly code
     lines = []
